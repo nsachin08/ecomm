@@ -10,23 +10,22 @@ const Product = () => {
   useEffect(() => {
     const getProducts = async () => {
       const response = await fetch(
-        "http://localhost:8081/categories/Headphones"
+        "https://sachinecomm.herokuapp.com/categories/Headphones"
       );
 
       if (componentsMounted) {
         setData(await response.clone().json());
       }
 
-      return () => { };
+      return () => {};
     };
     getProducts();
   }, []);
 
-
   return (
     <div className="container">
       <div>
-        <ShowProduct data={data}></ShowProduct >
+        <ShowProduct data={data}></ShowProduct>
       </div>
     </div>
   );

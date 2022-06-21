@@ -1,38 +1,41 @@
-import React, { useEffect, useRef ,useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Header.css";
 import { BsSearch } from "react-icons/bs";
 import Navbar from "./Navbar.js";
 import "./Nav.css";
 import { Link, useNavigate } from "react-router-dom";
 
-function Header() {
+function Header({ setsearchTerm }) {
   const nameForm = useRef(null);
   const history = useNavigate();
 
-
   const search = () => {
-    const form = nameForm.current["search"].value;
-    console.log(form);
-    var query = `/search/${form}`;
-     history(query);
+    const q = nameForm.current.value;
+    console.log(q);
+    setsearchTerm(q);
+    var query = `/search/${q}`;
+    history(query);
   };
 
   return (
     <div className="header">
       <div className="header__top">
         <div className="header__name">
-          <Link to="/">Name </Link>
+          <Link to="/" className="header__nametext">
+            Name
+          </Link>
         </div>
         <div className="header__search">
-           <form ref={nameForm} className="header__form" onSubmit={search} >
-            <input className="header__searchInput" name={"search"}
+          <label>
+            <input
+              ref={nameForm}
+              name={"search"}
+              className="header__searchInput"
             ></input>
-            <button className="header__searchbutton" >
-            <BsSearch className="header__searchIcon" />
-          </button>
-          </form> 
-          
-          
+            <button className="header__searchbutton" onClick={search}>
+              Search
+            </button>
+          </label>
         </div>
       </div>
       <div className="header__nav">

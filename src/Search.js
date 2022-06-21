@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from "react";
 import ShowProduct from "./ShowProduct";
 
-function Search() {
+function Search({ searchTerm }) {
   const [data, setData] = useState([]);
-  var q = window.location.pathname;
-  var query = q.slice(8);
 
   useEffect(() => {
     const getProducts = async () => {
       setData([]);
-      
-      var url = `http://localhost:8081/search/${query}`;
+
+      var url = `https://sachinecomm.herokuapp.com/search/${searchTerm}`;
+      console.log(url);
       const response = await fetch(url);
 
-        setData(await response.clone().json());
+      setData(await response.clone().json());
       return () => {};
     };
     getProducts();
-  }, []);
-
+  }, [searchTerm]);
 
   return (
     <div className="container">
