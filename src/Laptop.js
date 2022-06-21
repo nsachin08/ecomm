@@ -9,7 +9,9 @@ const Product = () => {
 
   useEffect(() => {
     const getProducts = async () => {
-      const response = await fetch("http://localhost:8081/categories/Laptops");
+      const response = await fetch(
+        "https://sachinecomm.herokuapp.com/categories/Laptops"
+      );
 
       if (componentsMounted) {
         setData(await response.clone().json());
@@ -19,7 +21,6 @@ const Product = () => {
     };
     getProducts();
   }, []);
-
 
   return (
     <div className="container">
