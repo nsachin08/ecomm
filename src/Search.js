@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ShowProduct from "./ShowProduct";
+import ShowProduct from "./ShowProducts";
 
 function Search({ searchTerm }) {
   const [data, setData] = useState([]);

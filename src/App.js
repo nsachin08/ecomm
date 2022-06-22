@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Laptop from "./Laptop.js";
 import Headphones from "./Headphones.js";
 import Search from "./Search.js";
+import Carts from "./Carts";
 import "./Product.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/categories/Laptops" element={<Laptop />} />
         <Route path="/categories/Headphones" element={<Headphones />} />
         <Route path="/search/:q" element={<Search searchTerm={searchTerm} />} />
+        <Route path="/cart" element={<Carts></Carts>} />
         <Route path="/" element={<Home />} />
       </Routes>
     </div>

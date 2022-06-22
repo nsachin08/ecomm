@@ -18,10 +18,20 @@
 .header__nametext {
   color: black;
 }
+.header__checkout {
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+.header__basketCount {
+  font-size: 30px;
+  align-items: center;
+}
 
 .header__search {
   align-items: center;
-  width: 70%;
+  width: 60%;
 }
 .header__searchInput {
   font-size: 20px;
@@ -44,6 +54,11 @@
 .header__searchbutton:hover {
   background-color: black;
   color: white;
+}
+.cart__icon,
+.cart__icon:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .header__nav {

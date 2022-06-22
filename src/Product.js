@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Product.css";
-import ShowProduct from "./ShowProduct";
+import ShowProducts from "./ShowProducts";
 import Pagination from "./Pagination";
 
 const Product = () => {
@@ -34,7 +34,7 @@ const Product = () => {
   return (
     <div className="container">
       <div>
-        <ShowProduct data={currentPosts}></ShowProduct>
+        <ShowProducts data={currentPosts}></ShowProducts>
         <br />
         <br />
         <Pagination
