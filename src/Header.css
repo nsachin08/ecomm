@@ -13,20 +13,35 @@
 .header__name {
   width: 30%;
   align-items: center;
+  padding: 10px;
+  text-shadow: 0 0 5px #fff;
+  letter-spacing: 10px;
 }
 
 .header__nametext {
   color: black;
+  text-decoration: none;
 }
 .header__checkout {
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 35px;
 }
 
 .header__basketCount {
-  font-size: 30px;
+  position: relative;
+  width: 2rem;
+  left: -2rem;
+  top: -1rem;
+  font-size: 1.6rem;
+  justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 50%;
+  background: #e24a13;
+  opacity: 0.9;
 }
 
 .header__search {
@@ -57,6 +72,7 @@
 }
 .cart__icon,
 .cart__icon:visited {
+  margin: 15px;
   text-decoration: none;
   color: black;
 }

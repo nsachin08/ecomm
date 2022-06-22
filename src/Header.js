@@ -33,7 +33,7 @@ function Header({ setsearchTerm }) {
       <div className="header__top">
         <div className="header__name">
           <Link to="/" className="header__nametext">
-            Name
+            Ecomm
           </Link>
         </div>
         <div className="header__search">
@@ -57,9 +57,7 @@ function Header({ setsearchTerm }) {
             <FaCartPlus className="cart__icon" />
           </Link>
 
-          <span className="header__basketCount">
-            {basket ? getcount(basket) : 0}
-          </span>
+          <p className="header__basketCount">{basket ? getcount(basket) : 0}</p>
         </div>
       </div>
       <div className="header__nav">
